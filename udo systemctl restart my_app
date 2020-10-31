@@ -1,0 +1,28 @@
+[0;1;32m●[0m my_app.service - "uWSGI server instance for my_app"
+   Loaded: loaded (/etc/systemd/system/my_app.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Mon 2020-10-12 21:17:45 UTC; 16h ago
+ Main PID: 1116 (uwsgi)
+    Tasks: 11 (limit: 1072)
+   CGroup: /system.slice/my_app.service
+           ├─1116 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1121 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1122 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1123 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1124 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1125 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1126 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1127 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1128 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           ├─1129 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+           └─1130 /usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+
+Oct 13 13:05:11 Willful uwsgi[1116]:   File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 39, in reraise
+Oct 13 13:05:11 Willful uwsgi[1116]:     raise value
+Oct 13 13:05:11 Willful uwsgi[1116]:   File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+Oct 13 13:05:11 Willful uwsgi[1116]:     rv = self.dispatch_request()
+Oct 13 13:05:11 Willful uwsgi[1116]:   File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1936, in dispatch_request
+Oct 13 13:05:11 Willful uwsgi[1116]:     return self.view_functions[rule.endpoint](**req.view_args)
+Oct 13 13:05:11 Willful uwsgi[1116]:   File "./app.py", line 35, in incoming
+Oct 13 13:05:11 Willful uwsgi[1116]:     message = viber_request.message
+Oct 13 13:05:11 Willful uwsgi[1116]: AttributeError: 'ViberDeliveredRequest' object has no attribute 'message'
+Oct 13 13:05:11 Willful uwsgi[1116]: [pid: 1129|app: 0|req: 29/112] 52.0.253.154 () {40 vars in 730 bytes} [Tue Oct 13 13:05:11 2020] POST /?sig=e7c0e9acea5a454e3b7968eb221b64ce1ed2cc865c2f5d296384c3dc5ffa3912 => generated 290 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 99 bytes (2 switches on core 0)
