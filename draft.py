@@ -24,7 +24,7 @@ app = Flask(__name__,static_folder='/')
 bot_configuration = BotConfiguration(
     name='automibi3445',
     avatar='http://viber.com/avatar.jpg',
-    auth_token='4c478ae7aec00b46-ae61a8e34721cea2-53f02a0305f91901'
+    auth_token='**'
 )
 viber = Api(bot_configuration)
 
