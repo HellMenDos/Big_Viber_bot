@@ -30,7 +30,7 @@ bot_configuration = BotConfiguration(
     auth_token='4c478ae7aec00b46-ae61a8e34721cea2-53f02a0305f91901'
 )
 viber = Api(bot_configuration)
-auth_token = '4c478ae7aec00b46-ae61a8e34721cea2-53f02a0305f91901' # тут ваш токен полученный в начале #п.2
+auth_token = '**' # тут ваш токен полученный в начале #п.2
 hook = 'https://chatapi.viber.com/pa/send_message'
 headers = {'X-Viber-Auth-Token': auth_token}
 
